@@ -157,7 +157,7 @@ const Home: NextPage = () => {
                     <Copy />
                   </button>
                   <textarea
-                    className="border-none w-full"
+                    className="border-none w-full text-black"
                     rows={60}
                     value={generatedBios}
                     disabled={true}
