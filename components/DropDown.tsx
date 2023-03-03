@@ -10,14 +10,45 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export type VibeType = "Professional" | "Casual" | "Funny";
+export type ProfessionType =
+  | "Doctor"
+  | "Teacher"
+  | "Engineer"
+  | "Lawyer"
+  | "Accountant"
+  | "Architect"
+  | "Nurse"
+  | "Dentist"
+  | "Scientist"
+  | "Artist"
+  | "Writer"
+  | "Chef"
+  | "Electrician"
+  | "Plumber"
+  | "Salesperson";
 
 interface DropDownProps {
-  vibe: VibeType;
-  setVibe: (vibe: VibeType) => void;
+  vibe: ProfessionType;
+  setVibe: (vibe: ProfessionType) => void;
 }
 
-let vibes: VibeType[] = ["Professional", "Casual", "Funny"];
+let professions: ProfessionType[] = [
+  "Doctor",
+  "Teacher",
+  "Engineer",
+  "Lawyer",
+  "Accountant",
+  "Architect",
+  "Nurse",
+  "Dentist",
+  "Scientist",
+  "Artist",
+  "Writer",
+  "Chef",
+  "Electrician",
+  "Plumber",
+  "Salesperson",
+];
 
 export default function DropDown({ vibe, setVibe }: DropDownProps) {
   return (
@@ -50,19 +81,19 @@ export default function DropDown({ vibe, setVibe }: DropDownProps) {
           key={vibe}
         >
           <div className="">
-            {vibes.map((vibeItem) => (
-              <Menu.Item key={vibeItem}>
+            {professions.map((profession) => (
+              <Menu.Item key={profession}>
                 {({ active }) => (
                   <button
-                    onClick={() => setVibe(vibeItem)}
+                    onClick={() => setVibe(profession)}
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      vibe === vibeItem ? "bg-gray-200" : "",
+                      vibe === profession ? "bg-gray-200" : "",
                       "px-4 py-2 text-sm w-full text-left flex items-center space-x-2 justify-between"
                     )}
                   >
-                    <span>{vibeItem}</span>
-                    {vibe === vibeItem ? (
+                    <span>{profession}</span>
+                    {vibe === profession ? (
                       <CheckIcon className="w-4 h-4 text-bold" />
                     ) : null}
                   </button>
