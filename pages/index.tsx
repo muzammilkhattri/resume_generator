@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                   Your generated Resume
                 </h2>
               </div>
-              <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+              <div className="space-y-8 flex flex-col items-center justify-center mx-auto">
                 <div className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border w-full">
                   <button
                     onClick={() => {
@@ -157,10 +157,10 @@ const Home: NextPage = () => {
                     <Copy />
                   </button>
                   <textarea
-                    className="border-none"
-                    cols={180}
-                    rows={60}
+                    className="border-none w-full"
                     value={generatedBios}
+                    cols={100}
+                    rows={100}
                     disabled={true}
                   ></textarea>
                 </div>
