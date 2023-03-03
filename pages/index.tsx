@@ -107,7 +107,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. My name is Jhon and I am Full-Stack React developer"
+              "e.g. My name is Jhon and I am Full-Stack developer"
             }
           />
 
@@ -160,7 +160,7 @@ const Home: NextPage = () => {
                     className="border-none w-full"
                     value={generatedBios}
                     cols={100}
-                    rows={100}
+                    rows={40}
                     disabled={true}
                   ></textarea>
                 </div>
