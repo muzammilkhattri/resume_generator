@@ -146,7 +146,7 @@ const Home: NextPage = () => {
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-                <div className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border">
+                <div className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border w-full">
                   <button
                     onClick={() => {
                       navigator.clipboard.writeText(generatedBios);
@@ -157,8 +157,7 @@ const Home: NextPage = () => {
                     <Copy />
                   </button>
                   <textarea
-                    className="border-none"
-                    cols={180}
+                    className="border-none w-full"
                     rows={60}
                     value={generatedBios}
                     disabled={true}
